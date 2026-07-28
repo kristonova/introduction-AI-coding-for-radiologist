@@ -1,0 +1,611 @@
+{
+  "kind": "precomputed_discussion_fallback",
+  "warning": "Prediksi tersimpan untuk diskusi saat model tidak tersedia; bukan inferensi baru.",
+  "model": {
+    "repository": "liodon-ai/dental-panoramic-detector",
+    "revision": "8bef2036b099e80e51f93f24de4b0c0edd366256",
+    "file": "best.onnx",
+    "sha256": "4cee38b54203634d895ed30a8910f5d7c4cefe22b18f9116b5561d9dd6e83a71",
+    "runtime": "onnxruntime 1.27.0 / CPUExecutionProvider",
+    "input": "RGB letterbox 640x640, padding 114",
+    "nms_iou": 0.35
+  },
+  "predictions": {
+    "test_cate1_004": {
+      "0.25": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.691389,
+          "bbox_xyxy": [
+            1400.61,
+            212.32,
+            1522.14,
+            346.12
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.671806,
+          "bbox_xyxy": [
+            1434.28,
+            493.16,
+            1574.77,
+            639.18
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.566023,
+          "bbox_xyxy": [
+            1193.31,
+            509.8,
+            1376.88,
+            739.35
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.43315,
+          "bbox_xyxy": [
+            460.67,
+            444.21,
+            558.56,
+            566.99
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.42425,
+          "bbox_xyxy": [
+            740.9,
+            525.24,
+            858.9,
+            699.6
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.418196,
+          "bbox_xyxy": [
+            503.77,
+            168.53,
+            608.74,
+            298.62
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.387835,
+          "bbox_xyxy": [
+            1174.86,
+            336.47,
+            1274.6,
+            538.59
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.369669,
+          "bbox_xyxy": [
+            643.49,
+            490.42,
+            800.05,
+            696.7
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.353911,
+          "bbox_xyxy": [
+            718.97,
+            304.0,
+            825.24,
+            522.53
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.317997,
+          "bbox_xyxy": [
+            1245.21,
+            304.76,
+            1363.19,
+            523.65
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.308649,
+          "bbox_xyxy": [
+            1126.09,
+            541.19,
+            1248.81,
+            738.15
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.293036,
+          "bbox_xyxy": [
+            636.34,
+            279.44,
+            752.86,
+            497.1
+          ]
+        }
+      ],
+      "0.45": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.691389,
+          "bbox_xyxy": [
+            1400.61,
+            212.32,
+            1522.14,
+            346.12
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.671806,
+          "bbox_xyxy": [
+            1434.28,
+            493.16,
+            1574.77,
+            639.18
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.566023,
+          "bbox_xyxy": [
+            1193.31,
+            509.8,
+            1376.88,
+            739.35
+          ]
+        }
+      ]
+    },
+    "test_cate1_012": {
+      "0.25": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.660802,
+          "bbox_xyxy": [
+            1406.09,
+            467.15,
+            1539.18,
+            610.16
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.655065,
+          "bbox_xyxy": [
+            410.1,
+            493.02,
+            545.91,
+            635.54
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.568719,
+          "bbox_xyxy": [
+            520.65,
+            187.72,
+            672.58,
+            343.06
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.566662,
+          "bbox_xyxy": [
+            1180.53,
+            497.72,
+            1362.3,
+            716.56
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.511678,
+          "bbox_xyxy": [
+            1234.1,
+            220.72,
+            1384.54,
+            406.6
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.510547,
+          "bbox_xyxy": [
+            1130.17,
+            520.56,
+            1256.74,
+            730.15
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.344106,
+          "bbox_xyxy": [
+            629.23,
+            516.64,
+            813.75,
+            741.71
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.294188,
+          "bbox_xyxy": [
+            755.96,
+            535.78,
+            858.05,
+            714.67
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.269946,
+          "bbox_xyxy": [
+            1188.02,
+            290.2,
+            1311.47,
+            516.06
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.269726,
+          "bbox_xyxy": [
+            1081.68,
+            526.01,
+            1153.53,
+            768.68
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.257943,
+          "bbox_xyxy": [
+            672.63,
+            322.89,
+            800.61,
+            538.44
+          ]
+        }
+      ],
+      "0.45": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.660802,
+          "bbox_xyxy": [
+            1406.09,
+            467.15,
+            1539.18,
+            610.16
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.655065,
+          "bbox_xyxy": [
+            410.1,
+            493.02,
+            545.91,
+            635.54
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.568719,
+          "bbox_xyxy": [
+            520.65,
+            187.72,
+            672.58,
+            343.06
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.566662,
+          "bbox_xyxy": [
+            1180.53,
+            497.72,
+            1362.3,
+            716.56
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.511678,
+          "bbox_xyxy": [
+            1234.1,
+            220.72,
+            1384.54,
+            406.6
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.510547,
+          "bbox_xyxy": [
+            1130.17,
+            520.56,
+            1256.74,
+            730.15
+          ]
+        }
+      ]
+    },
+    "test_cate1_001": {
+      "0.25": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.730517,
+          "bbox_xyxy": [
+            1334.58,
+            249.92,
+            1465.24,
+            392.69
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.656542,
+          "bbox_xyxy": [
+            564.76,
+            219.01,
+            711.63,
+            375.34
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.451484,
+          "bbox_xyxy": [
+            477.0,
+            534.71,
+            608.95,
+            681.48
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.444084,
+          "bbox_xyxy": [
+            1393.62,
+            571.95,
+            1521.07,
+            712.35
+          ]
+        }
+      ],
+      "0.45": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.730517,
+          "bbox_xyxy": [
+            1334.58,
+            249.92,
+            1465.24,
+            392.69
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.656542,
+          "bbox_xyxy": [
+            564.76,
+            219.01,
+            711.63,
+            375.34
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.451484,
+          "bbox_xyxy": [
+            477.0,
+            534.71,
+            608.95,
+            681.48
+          ]
+        }
+      ]
+    },
+    "test_cate1_000": {
+      "0.25": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.775754,
+          "bbox_xyxy": [
+            538.58,
+            198.32,
+            664.02,
+            326.98
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.755839,
+          "bbox_xyxy": [
+            1353.24,
+            217.77,
+            1469.22,
+            343.76
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.726859,
+          "bbox_xyxy": [
+            445.72,
+            502.31,
+            587.42,
+            649.04
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.69524,
+          "bbox_xyxy": [
+            1410.71,
+            515.15,
+            1536.82,
+            653.02
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.538662,
+          "bbox_xyxy": [
+            1218.78,
+            311.13,
+            1330.13,
+            521.18
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.405513,
+          "bbox_xyxy": [
+            1171.39,
+            516.07,
+            1342.22,
+            743.75
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.352112,
+          "bbox_xyxy": [
+            672.27,
+            510.01,
+            855.19,
+            723.73
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.305109,
+          "bbox_xyxy": [
+            696.95,
+            283.26,
+            832.21,
+            508.9
+          ]
+        }
+      ],
+      "0.45": [
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.775754,
+          "bbox_xyxy": [
+            538.58,
+            198.32,
+            664.02,
+            326.98
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.755839,
+          "bbox_xyxy": [
+            1353.24,
+            217.77,
+            1469.22,
+            343.76
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.726859,
+          "bbox_xyxy": [
+            445.72,
+            502.31,
+            587.42,
+            649.04
+          ]
+        },
+        {
+          "class_id": 2,
+          "label": "impacted_tooth",
+          "score": 0.69524,
+          "bbox_xyxy": [
+            1410.71,
+            515.15,
+            1536.82,
+            653.02
+          ]
+        },
+        {
+          "class_id": 0,
+          "label": "caries",
+          "score": 0.538662,
+          "bbox_xyxy": [
+            1218.78,
+            311.13,
+            1330.13,
+            521.18
+          ]
+        }
+      ]
+    }
+  }
+}

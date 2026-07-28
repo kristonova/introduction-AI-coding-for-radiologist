@@ -1,0 +1,70 @@
+{
+  "warning": "Semua berkas ini adalah output tersimpan, bukan eksekusi notebook yang baru.",
+  "files": [
+    {
+      "name": "precomputed_predictions.json",
+      "bytes": 13170,
+      "sha256": "c002b8cf173c7cb35228b1eff4abf2230c45514c5a50d09e56578df2146d26b0"
+    },
+    {
+      "name": "canonical_sesi1_overview.png",
+      "bytes": 1005102,
+      "sha256": "e10b7b7d13ba1a40039f8e85a04917458fb47d5570ad23d83b51420a3df33508"
+    },
+    {
+      "name": "canonical_sesi2_predictions.png",
+      "bytes": 2717974,
+      "sha256": "e9c9c5346f20d56ecc13ca12592da470ac6cd44a8f06d84e18b46c4aee0b4d97"
+    },
+    {
+      "name": "canonical_sesi2_occlusion.png",
+      "bytes": 595879,
+      "sha256": "99b2688df844743ee7daf7cce4e597eef8c9137c939f1b65e9c7ad5ce433747d"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_004_conf025.png",
+      "bytes": 723494,
+      "sha256": "41d27a74973a67466fac850ca9320ddc0e90a9a59831bb2793ae34c53902fa05"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_004_conf045.png",
+      "bytes": 700179,
+      "sha256": "1720ca72bab7cd9c62287f088ba2fb9cb4a73843b0ed8977043b6973dc14f3c7"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_012_conf025.png",
+      "bytes": 716676,
+      "sha256": "384f1ba05769c1c78b3f45715023e3b7907430433c33e080b50c1ecc4c83e172"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_012_conf045.png",
+      "bytes": 705680,
+      "sha256": "73cbf2f58b6f0182d66515c51f7aacf940f49a899c190b55396357cfcfa36fa5"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_001_conf025.png",
+      "bytes": 707336,
+      "sha256": "7bc2a6552e8056b87806a95603fa92e243b7d8738477a2dae8a25e71c96c9887"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_001_conf045.png",
+      "bytes": 703182,
+      "sha256": "022cd424bdaa2668ab2ab2a9567ff362715918825157fa63d9679d2f3ee3a0a8"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_000_conf025.png",
+      "bytes": 690831,
+      "sha256": "e2eb9e8f1747f24c07a4f4e61790df5c264c6899e19b834bdc55375beaadb9db"
+    },
+    {
+      "name": "canonical_overlay_test_cate1_000_conf045.png",
+      "bytes": 683921,
+      "sha256": "958fd100892fcedb2804ad9649bd287003247cf524dce8b791cf431f29b31386"
+    },
+    {
+      "name": "canonical_occlusion_test_cate1_004_grid6.png",
+      "bytes": 576377,
+      "sha256": "52eaa95fef5a86d2061059f86deff682820e6199e681207338bfb53863ae4f2d"
+    }
+  ]
+}

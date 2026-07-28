@@ -1,168 +1,135 @@
-<br># 🦷 Introduction to AI Coding for Radiologists
+# Lab Skills: Aplikasi Coding AI untuk Radiologi Kedokteran Gigi
 
-<p align="center">
-  <em>Materi Praktikum Kuliah Tamu — Fakultas Kedokteran Gigi, Universitas Gadjah Mada</em>
-</p>
+Materi ini disiapkan untuk dua sesi *lab skills* di Departemen Radiologi Dentomaksilofasial, Program Pendidikan Dokter Gigi Spesialis Radiologi Kedokteran Gigi, Fakultas Kedokteran Gigi Universitas Gadjah Mada.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform-Google%20Colab-F9AB00?logo=googlecolab&logoColor=white" alt="Google Colab"/>
-  <img src="https://img.shields.io/badge/Python-3.8+-3776AB?logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Framework-PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"/>
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="License"/>
-</p>
+Peserta diasumsikan belum pernah menggunakan Python. Fokus kegiatan bukan membangun model, melainkan menjalankan kode yang sudah dipandu, mengubah parameter sederhana, membaca keluaran model secara kritis, dan mengenali kondisi ketika keluaran tersebut tidak layak dipercaya.
 
----
+> **Batas penggunaan:** seluruh materi hanya untuk pendidikan dan audit model. Notebook, deteksi, skor model, kotak prediksi, dan *heatmap* tidak boleh digunakan untuk keputusan pelayanan pasien.
 
-## 📋 Tentang Proyek
+## Capaian pembelajaran
 
-Repository ini berisi materi praktikum **pengantar pemrograman Python dan Artificial Intelligence (AI)** yang dirancang khusus untuk **mahasiswa kedokteran gigi dan radiologi** yang berangkat dari **titik nol pemrograman**.
+Setelah menyelesaikan dua sesi, peserta diharapkan dapat:
 
-Materi dikemas dalam format **Jupyter Notebook** yang siap dijalankan di **Google Colab** — tanpa perlu instalasi apapun di komputer lokal.
+1. menjalankan sel Google Colab secara berurutan dan memulihkan kesalahan umum;
+2. mengenali variabel, *list*, indeks mulai dari nol, fungsi, dan *array* citra;
+3. menghubungkan koordinat *bounding box* dengan anatomi pada radiograf panoramik;
+4. membandingkan citra asli, *histogram equalization*, dan CLAHE tanpa menganggap peningkatan kontras menciptakan informasi baru;
+5. membedakan *classification*, *object detection*, dan *segmentation*;
+6. mengubah ambang skor detektor dan menilai konsekuensinya terhadap FP/FN;
+7. menjelaskan keterbatasan *label space*, *domain shift*, dan *occlusion sensitivity*; serta
+8. menerapkan prinsip privasi, pengawasan manusia, dan penggunaan AI nonklinis.
 
-### 🎯 Tujuan Pembelajaran
+## Struktur repositori
 
-- Memahami dasar pemrograman Python dalam konteks klinis radiologi gigi
-- Mampu melakukan pengolahan citra digital rontgen gigi menggunakan kode
-- Memahami cara kerja model AI (*Deep Learning*) untuk klasifikasi patologi gigi
-- Mengenal konsep *Explainable AI* (Grad-CAM) untuk transparansi keputusan model
-
----
-
-## 📂 Struktur Repository
-
-```
+```text
 introduction-coding-for-radiologist/
-│
+├── assets/
+│   └── pediatric_opg/        # Empat kasus publik, manifest, dan fallback diskusi
 ├── notebook/
 │   ├── Sesi_1_Dasar_Python_dan_Pengolahan_Citra_Radiologi.ipynb
 │   └── Sesi_2_Implementasi_AI_dan_Explainable_AI.ipynb
-│
 ├── docs/
-│   ├── silabus.md              # Silabus versi awal
-│   ├── silabus-2.md            # Silabus revisi final
-│   └── notebooks_summary.md    # Ringkasan isi kedua notebook
-│
+│   ├── silabus.md            # Arsip versi awal
+│   ├── silabus-2.md          # Silabus final
+│   └── notebooks_summary.md
+├── scripts/                  # Regenerasi fallback dan pemeriksaan materi
 └── README.md
 ```
 
----
+## Alur dua sesi
 
-## 🧪 Sesi Praktikum
+Masing-masing sesi berlangsung 150 menit.
 
-### Sesi 1 — Dasar Python & Pengolahan Citra Digital Radiologi
-**Durasi:** 150 menit &nbsp;|&nbsp; **Level:** Pemula Absolut
+| Menit | Sesi 1 — Python dan Citra | Sesi 2 — AI dan XAI |
+|---:|---|---|
+| 0–15 | Orientasi, Colab, dan keamanan data | Rekap dan pembacaan kasus sebelum melihat AI |
+| 15–45 | Variabel, *list*, indeks, fungsi, dan `print()` | *Classification* vs *detection* vs *segmentation* |
+| 45–75 | OPG sebagai *array*: `shape`, `dtype`, piksel, histogram | *Dataset card*, *model card*, train/test, dan *label space* |
+| 75–90 | Istirahat dan checkpoint | Istirahat dan checkpoint |
+| 90–115 | *Bounding box*, koordinat, ROI, dan *cropping* | Inferensi empat kasus dan perubahan *threshold* |
+| 115–135 | *Histogram equalization* dan CLAHE | Ground truth vs prediksi, TP/FP/FN, dan *domain shift* |
+| 135–150 | Tantangan kasus kedua dan *exit ticket* | *Occlusion sensitivity*, etika, dan *exit ticket* |
 
-| Topik | Deskripsi |
-|---|---|
-| **Pengenalan Google Colab** | Setup environment, menjalankan cell kode |
-| **Crash Course Python** | Variabel, List, import library (`numpy`, `matplotlib`, `cv2`) |
-| **Manipulasi Citra Rontgen** | Membaca gambar X-Ray, memahami piksel sebagai matriks angka |
-| **Region of Interest (ROI)** | Cropping area gigi yang dicurigai karies |
-| **Peningkatan Kontras** | Histogram Equalization & CLAHE untuk memperjelas lesi |
+Rincian aktivitas terdapat pada [silabus final](docs/silabus-2.md), sedangkan peta isi dan fungsi setiap notebook terdapat pada [ringkasan notebook](docs/notebooks_summary.md).
 
-> **Output:** Mahasiswa mampu mengolah dan memodifikasi visual gambar rontgen gigi menggunakan kode Python mereka sendiri.
+## Data dan model
 
----
+### Radiograf publik
 
-### Sesi 2 — Implementasi AI (Deep Learning) & Explainable AI
-**Durasi:** 150 menit &nbsp;|&nbsp; **Level:** Menengah
+Empat citra uji berasal dari subset pediatrik pada [Children’s Dental Panoramic Radiographs Dataset](https://springernature.figshare.com/articles/dataset/Children_s_Dental_Panoramic_Radiographs_Dataset/21621705) (DOI koleksi: `10.6084/m9.figshare.c.6317013.v1`). Konteks pengumpulan, anonimisasi, persetujuan, serta keterbatasannya dijelaskan dalam [artikel Scientific Data](https://www.nature.com/articles/s41597-023-02237-5) (DOI: `10.1038/s41597-023-02237-5`).
 
-| Topik | Deskripsi |
-|---|---|
-| **Konsep AI Tanpa Matematika** | Classification, Object Detection, Segmentation |
-| **Transfer Learning (ResNet-18)** | Memuat model pre-trained untuk deteksi Normal vs Karies |
-| **Inferensi AI** | Menjalankan prediksi probabilitas klinis dari gambar rontgen |
-| **Explainable AI (Grad-CAM)** | Visualisasi heatmap area fokus perhatian model AI |
-| **Diskusi Klinis & Etika** | Limitasi AI, artefak, peran AI sebagai asisten dokter |
+Materi hanya memaketkan empat kasus publik bernama `test_cate1_000`, `test_cate1_001`, `test_cate1_004`, dan `test_cate1_012`. Manifest ringkas tidak menyimpan `imageData` base64 atau metadata pasien. Berkas dataset pada Figshare dinyatakan dengan lisensi CC0 1.0; artikel pendamping menggunakan CC BY 4.0.
 
-> **Output:** Mahasiswa memahami cara AI mengambil keputusan dan mampu memvisualisasikan area fokus model menggunakan Grad-CAM heatmap.
+### Detektor eksternal
 
----
+Sesi 2 mengaudit [dental-panoramic-detector](https://huggingface.co/liodon-ai/dental-panoramic-detector) sebagai artefak eksternal, bukan alat pelayanan. Notebook mengambil `best.onnx` pada revisi tetap:
 
-## 🚀 Cara Menggunakan
-
-### Opsi 1: Google Colab (Direkomendasikan)
-
-1. **Unduh** kedua file `.ipynb` dari folder `notebook/`
-2. **Unggah** ke Google Drive Anda
-3. **Klik kanan** pada file notebook → **Open with** → **Google Colaboratory**
-4. Jalankan setiap cell kode secara berurutan dengan menekan `Shift + Enter`
-
-> [!NOTE]
-> Seluruh data gambar rontgen uji akan **diunduh secara otomatis** dari internet saat cell kode dijalankan. Tidak perlu mengunggah gambar secara manual.
-
-### Opsi 2: Jalankan Lokal
-
-```bash
-# Clone repository
-git clone https://github.com/kristonova/introduction-AI-coding-for-radiologist.git
-cd introduction-AI-coding-for-radiologist
-
-# Buat virtual environment (opsional)
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-# Install dependencies
-pip install numpy matplotlib opencv-python torch torchvision jupyter
-
-# Jalankan Jupyter
-jupyter notebook
+```text
+8bef2036b099e80e51f93f24de4b0c0edd366256
 ```
 
----
+Unduhan harus memiliki SHA-256 berikut sebelum dapat dipakai:
 
-## 🧰 Tech Stack
+```text
+4cee38b54203634d895ed30a8910f5d7c4cefe22b18f9116b5561d9dd6e83a71
+```
 
-| Komponen | Teknologi |
-|---|---|
-| **Platform** | Google Colab / Jupyter Notebook |
-| **Bahasa** | Python 3.8+ |
-| **Pengolahan Citra** | OpenCV (`cv2`), NumPy, Matplotlib |
-| **Deep Learning** | PyTorch, torchvision |
-| **Arsitektur Model** | ResNet-18 (Transfer Learning) |
-| **Explainability** | Grad-CAM |
+Model dijalankan pada CPU dengan `onnxruntime==1.27.0`. Model card menyatakan CC BY-NC 4.0, sedangkan metadata ONNX juga memuat pemberitahuan Ultralytics AGPL-3.0. Keduanya ditampilkan agar pengguna dapat menilai persyaratan yang relevan; materi membatasi penggunaan pada kegiatan akademik nonkomersial dan tidak mendistribusikan bobot model.
 
----
+## Menggunakan notebook di Google Colab
 
-## 📖 Petunjuk untuk Pengajar
+Kebutuhan minimum:
 
-1. **Bagikan notebook** ke mahasiswa melalui Google Colab dengan mode *View only*
-2. Instruksikan mahasiswa untuk menekan **File → Save a copy in Drive** sebelum mengedit
-3. Notebook bersifat **self-contained** — semua resource diunduh otomatis saat runtime
-4. Sediakan waktu jeda (~15 menit) di antara setiap sesi untuk istirahat dan tanya jawab
+- browser modern dan akun Google;
+- koneksi internet untuk mengambil aset publik, memasang `onnxruntime`, dan mengunduh model pada Sesi 2;
+- runtime CPU; GPU tidak diperlukan.
 
-> [!TIP]
-> Siapkan beberapa pertanyaan diskusi klinis di akhir Sesi 2, terutama seputar limitasi AI dan pentingnya validasi oleh dokter gigi.
+Langkah peserta:
 
----
+1. Buka notebook dari folder [`notebook/`](notebook/).
+2. Pilih **Open in Colab**, atau unggah file `.ipynb` ke Google Drive lalu pilih **Open with → Google Colaboratory**.
+3. Pilih **File → Save a copy in Drive**.
+4. Pilih **Runtime → Restart session**, kemudian **Runtime → Run all**.
+5. Ikuti label sel: `▶ Jalankan`, `✏ Ubah`, `🩺 Diskusikan`, dan `✅ Checkpoint`.
+6. Ubah hanya parameter yang ditandai, seperti `CASE_ID`, `ROI`, `CLAHE_CLIP`, `CONF_THRESHOLD`, atau `OCCLUSION_GRID`.
 
-## 🤝 Kontribusi
+Jika unduhan gagal, baca pesan pemulihan pada notebook lalu coba ulang setelah memeriksa koneksi. Kegagalan checksum menghentikan pemuatan model; berkas lama tidak digunakan. Output tersimpan hanya merupakan **fallback untuk diskusi**, bukan keluaran inferensi yang baru dijalankan.
 
-Kontribusi sangat diterima! Silakan:
+> **Privasi:** jangan mengunggah radiograf pasien, ekspor DICOM klinis, tangkapan layar sistem rumah sakit, nama, tanggal lahir, nomor rekam medis, atau pengenal lain ke Colab maupun repositori ini. Gunakan hanya `case_id` publik yang telah disediakan.
 
-1. Fork repository ini
-2. Buat branch fitur (`git checkout -b fitur/nama-fitur`)
-3. Commit perubahan (`git commit -m 'Tambah fitur baru'`)
-4. Push ke branch (`git push origin fitur/nama-fitur`)
-5. Buat Pull Request
+## Preflight pengajar
 
----
+Lakukan preflight paling lambat satu hari sebelum kelas:
 
-## 📄 Lisensi
+1. pastikan revisi notebook dan folder `assets/pediatric_opg` sudah dipublikasikan ke branch `main` yang dirujuk loader, atau bagikan folder aset bersama notebook;
+2. buka kedua notebook pada runtime Colab CPU yang baru;
+3. jalankan **Restart session → Run all** dua kali;
+4. pastikan keempat citra, manifest, URL model, revisi, dan checksum dapat diakses;
+5. pastikan perbandingan `conf=0.25` dan `conf=0.45` serta *occlusion sensitivity* selesai tanpa GPU;
+6. simulasi kegagalan koneksi dan tunjukkan letak fallback diskusi;
+7. siapkan salinan lokal notebook dan aset publik untuk presentasi;
+8. ingatkan peserta agar tidak mengunggah data pasien; dan
+9. tinjau ulang istilah keluaran: gunakan “deteksi”, “prediksi”, dan “skor model”.
 
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+Pemeriksaan lokal yang disertakan:
 
----
+```bash
+python scripts/validate_materials.py
+python scripts/test_failure_paths.py
+python scripts/smoke_run_notebooks.py --runs 2
+```
 
-## 🙏 Acknowledgements
+`generate_canonical_fallbacks.py` dapat meregenerasi output tersimpan dari salinan `best.onnx` yang telah diverifikasi. Bobot model tetap tidak dimasukkan ke repositori.
 
-- **Fakultas Kedokteran Gigi, Universitas Gadjah Mada** — untuk kesempatan kuliah tamu
-- Dataset citra rontgen gigi dari sumber publik
-- Komunitas open-source PyTorch dan OpenCV
+## Batas interpretasi
 
----
+- Skor model bukan estimasi risiko individual.
+- Kotak prediksi tidak menjelaskan sebab suatu temuan.
+- *Heatmap occlusion* menunjukkan sensitivitas terhadap penutupan area pada konfigurasi tertentu, bukan bukti keberadaan lesi.
+- Kecocokan dengan anotasi dataset tidak sama dengan validasi klinis.
+- Dataset pediatrik, skema label, perangkat, populasi, dan protokol akuisisi dapat berbeda dari data yang pernah digunakan untuk melatih model.
+- Hasil selalu memerlukan penilaian profesional dan pengawasan manusia.
 
-<p align="center">
-  <sub>Dibuat dengan ❤️ untuk pendidikan AI di bidang radiologi kedokteran gigi</sub>
-</p>
+## Lisensi dan atribusi
+
+Repositori ini belum menetapkan lisensi proyek. Setiap aset pihak ketiga tetap mengikuti lisensi dan ketentuan sumbernya masing-masing. Lihat manifest dan berkas atribusi di [`assets/pediatric_opg/`](assets/pediatric_opg/) sebelum menggunakan ulang aset.

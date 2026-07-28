@@ -1,0 +1,197 @@
+{
+  "manifest_version": "1.0",
+  "created_for": "Lab AI Radiologi Dentomaksilofasial UGM",
+  "dataset": {
+    "title": "Children's Dental Panoramic Radiographs Dataset",
+    "subset": "Pediatric dental disease detection dataset / Test",
+    "record_url": "https://springernature.figshare.com/articles/dataset/Children_s_Dental_Panoramic_Radiographs_Dataset/21621705",
+    "dataset_doi": "https://doi.org/10.6084/m9.figshare.c.6317013.v1",
+    "article_url": "https://www.nature.com/articles/s41597-023-02237-5",
+    "article_doi": "https://doi.org/10.1038/s41597-023-02237-5",
+    "dataset_license": "CC0 1.0",
+    "provenance_note": "Empat citra berasal dari split Test publik. Artikel melaporkan anonimisasi, persetujuan orang tua/wali, dan telaah etik. Manifest ini tidak memuat imageData base64 atau metadata pasien."
+  },
+  "bbox_policy": "bbox_xyxy = [x1, y1, x2, y2] pada citra asli 2000 x 942; koordinat sumber pecahan dibulatkan ke luar (floor untuk minimum, ceil untuk maksimum).",
+  "cases": [
+    {
+      "case_id": "test_cate1_000",
+      "original_case_id": "cate1_000",
+      "image": "test_cate1_000.png",
+      "split": "test",
+      "width": 2000,
+      "height": 942,
+      "format": "PNG",
+      "bit_depth": 8,
+      "sha256": "50274a206536efd5e7352c091e2c613e9ea54e5ab280440eced4f13e6b82095a",
+      "annotations": [
+        {
+          "label_id": "other",
+          "label_indonesia": "Lainnya",
+          "label_english": "Other",
+          "source_label": "其他",
+          "bbox_xyxy": [945, 550, 1000, 658],
+          "evaluation_model_class": null
+        },
+        {
+          "label_id": "other",
+          "label_indonesia": "Lainnya",
+          "label_english": "Other",
+          "source_label": "其他",
+          "bbox_xyxy": [1001, 553, 1041, 631],
+          "evaluation_model_class": null
+        }
+      ]
+    },
+    {
+      "case_id": "test_cate1_001",
+      "original_case_id": "cate1_001",
+      "image": "test_cate1_001.png",
+      "split": "test",
+      "width": 2000,
+      "height": 942,
+      "format": "PNG",
+      "bit_depth": 8,
+      "sha256": "00caed2a175900590eb21911f65e86ae84a3c8137f42dc8a206044ddbdbe2254",
+      "annotations": [
+        {
+          "label_id": "deep_pit_fissure",
+          "label_indonesia": "Pit/fisur dalam",
+          "label_english": "Deep pit/fissure",
+          "source_label": "深窝沟",
+          "bbox_xyxy": [639, 295, 764, 492],
+          "evaluation_model_class": null
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [752, 371, 836, 500],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [735, 538, 831, 681],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [822, 552, 894, 678],
+          "evaluation_model_class": "caries"
+        }
+      ]
+    },
+    {
+      "case_id": "test_cate1_004",
+      "original_case_id": "cate1_004",
+      "image": "test_cate1_004.png",
+      "split": "test",
+      "width": 2000,
+      "height": 942,
+      "format": "PNG",
+      "bit_depth": 8,
+      "sha256": "851f6dc646d850d2506d7b17758e10afb8395c87765bac9d3628b5cb3d5343cd",
+      "annotations": [
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [645, 367, 750, 498],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [726, 381, 805, 516],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [1187, 414, 1269, 526],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [1251, 392, 1354, 520],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [678, 501, 792, 643],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [763, 536, 856, 652],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [1131, 544, 1219, 669],
+          "evaluation_model_class": "caries"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [1200, 518, 1344, 660],
+          "evaluation_model_class": "caries"
+        }
+      ]
+    },
+    {
+      "case_id": "test_cate1_012",
+      "original_case_id": "cate1_012",
+      "image": "test_cate1_012.png",
+      "split": "test",
+      "width": 2000,
+      "height": 942,
+      "format": "PNG",
+      "bit_depth": 8,
+      "sha256": "5480348f01a8d5dd948046dcf627f7b30d33966e1dbcafedd64f9db443f0ba8e",
+      "annotations": [
+        {
+          "label_id": "periapical_periodontitis",
+          "label_indonesia": "Periodontitis periapikal",
+          "label_english": "Periapical periodontitis",
+          "source_label": "根尖周炎",
+          "bbox_xyxy": [777, 547, 850, 692],
+          "evaluation_model_class": "periapical_lesion"
+        },
+        {
+          "label_id": "caries",
+          "label_indonesia": "Karies",
+          "label_english": "Caries",
+          "source_label": "龋病",
+          "bbox_xyxy": [1132, 534, 1208, 678],
+          "evaluation_model_class": "caries"
+        }
+      ]
+    }
+  ]
+}
