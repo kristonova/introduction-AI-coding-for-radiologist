@@ -1,0 +1,10 @@
+/* Motion — dignified and short. No bounce, no spring, no long fades. */
+:root{
+  --duration-fast: 120ms; /* @kind other */
+  --duration-base: 180ms; /* @kind other */
+  --duration-slow: 240ms; /* @kind other */
+  --ease-standard: cubic-bezier(.2,0,.2,1); /* @kind other */
+  --ease-out: cubic-bezier(0,0,.2,1); /* @kind other */
+  --ease-in-out: cubic-bezier(.4,0,.2,1); /* @kind other */
+  --transition-base: all var(--duration-base) var(--ease-standard);
+}

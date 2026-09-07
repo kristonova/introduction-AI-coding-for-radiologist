@@ -1,0 +1,15 @@
+/* Official UGM typefaces. Gama Serif + Gama Sans (SK Rektor 1398/UN1.P/SK/HUKOR/2017, ch. VII).
+   PT Sans is the brand standard's documented web typeface; loaded as the complementary face. */
+/* PT Sans (Google Fonts) sengaja dinonaktifkan: deck ini harus utuh dari file:// tanpa
+   internet. Gama Sans di-self-host di ../fonts/ dan sudah menanggung seluruh teks. */
+
+@font-face{font-family:"Gama Sans";src:url("../fonts/GamaSans-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Gama Sans";src:url("../fonts/GamaSans-LightItalic.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"Gama Sans";src:url("../fonts/GamaSans-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Gama Sans";src:url("../fonts/GamaSans-Italic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Gama Sans";src:url("../fonts/GamaSans-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Gama Sans";src:url("../fonts/GamaSans-BoldItalic.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"Gama Serif";src:url("../fonts/GamaSerif-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Gama Serif";src:url("../fonts/GamaSerif-Italic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Gama Serif";src:url("../fonts/GamaSerif-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Gama Serif";src:url("../fonts/GamaSerif-BoldItalic.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap}

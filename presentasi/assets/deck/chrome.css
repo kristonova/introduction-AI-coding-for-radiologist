@@ -1,0 +1,194 @@
+/* ===========================================================================
+   Chrome presenter: nav, overview, menu bab, catatan, timer, bantuan, cetak.
+   Semuanya di luar panggung 1280x720 dan hilang total saat dicetak.
+   =========================================================================== */
+
+/* --- Nav pill mengambang ------------------------------------------------ */
+
+.nav{
+  position:fixed;left:50%;bottom:22px;transform:translateX(-50%);
+  display:flex;align-items:center;gap:4px;z-index:40;
+  background:rgba(255,255,255,.94);
+  border:1px solid var(--border-subtle);border-radius:var(--radius-sm);
+  box-shadow:var(--shadow-lg);padding:5px;
+  opacity:0;pointer-events:none;
+  transition:opacity var(--duration-base) var(--ease-standard);
+}
+.nav.is-visible{opacity:1;pointer-events:auto}
+.nav button{
+  font:inherit;font-size:13px;font-weight:var(--weight-bold);
+  padding:7px 12px;border:0;border-radius:3px;background:transparent;
+  color:var(--ugm-blue);cursor:pointer;
+  transition:background var(--duration-fast) var(--ease-standard);
+}
+.nav button:hover{background:var(--ugm-blue-050)}
+.nav__count{
+  font-family:var(--font-mono);font-size:13px;color:var(--text-muted);
+  padding:0 10px;min-width:56px;text-align:center;
+}
+.nav__sep{width:1px;height:20px;background:var(--border-subtle);margin:0 2px}
+
+/* --- Progress ----------------------------------------------------------- */
+
+.progress{
+  position:fixed;left:0;bottom:0;height:3px;background:var(--ugm-yellow);
+  z-index:41;transition:width var(--duration-base) var(--ease-standard);
+}
+
+/* --- Overview ----------------------------------------------------------- */
+
+.ov{
+  position:fixed;inset:0;z-index:50;background:var(--ugm-blue-deep);
+  overflow-y:auto;padding:28px 32px 40px;box-sizing:border-box;display:none;
+}
+.ov.is-open{display:block}
+.ov__head{
+  display:flex;align-items:baseline;gap:16px;margin-bottom:20px;
+  color:var(--white);
+}
+.ov__head h2{margin:0;font-size:22px;color:var(--white)}
+.ov__head p{margin:0;font-size:14px;color:rgba(255,255,255,.66)}
+.ov__grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ov__cell{
+  position:relative;aspect-ratio:16/9;overflow:hidden;cursor:pointer;
+  background:var(--white);border:2px solid transparent;
+  transition:border-color var(--duration-fast) var(--ease-standard);
+}
+.ov__cell:hover,.ov__cell:focus-visible{border-color:var(--ugm-yellow);outline:none}
+.ov__cell.is-current{border-color:var(--ugm-yellow)}
+.ov__thumb{
+  position:absolute;left:0;top:0;width:var(--stage-w);height:var(--stage-h);
+  transform-origin:top left;pointer-events:none;
+}
+.ov__no{
+  position:absolute;left:0;bottom:0;z-index:5;
+  background:var(--ugm-blue);color:var(--white);
+  font-family:var(--font-mono);font-size:11px;padding:2px 7px;
+}
+.ov__chapter{
+  grid-column:1/-1;margin:14px 0 0;
+  font-size:13px;font-weight:var(--weight-bold);
+  letter-spacing:var(--tracking-wide);text-transform:uppercase;
+  color:var(--ugm-yellow);
+  border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:7px;
+}
+.ov__chapter:first-child{margin-top:0}
+
+/* --- Menu bab ----------------------------------------------------------- */
+
+.menu{
+  position:fixed;inset:0;z-index:55;display:none;
+  background:rgba(1,65,107,.48);backdrop-filter:blur(2px);
+  align-items:center;justify-content:center;
+}
+.menu.is-open{display:flex}
+.menu__panel{
+  background:var(--white);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);width:560px;max-width:92vw;
+  padding:26px 28px;box-sizing:border-box;
+}
+.menu__panel h2{margin:0 0 4px;font-size:22px}
+.menu__panel > p{margin:0 0 18px;font-size:14px;color:var(--text-muted)}
+.menu__list{display:flex;flex-direction:column;gap:2px}
+.menu__item{
+  display:flex;align-items:center;gap:14px;width:100%;
+  font:inherit;text-align:left;cursor:pointer;
+  padding:11px 12px;border:0;border-radius:var(--radius-sm);
+  background:transparent;color:var(--text-body);
+  transition:background var(--duration-fast) var(--ease-standard);
+}
+.menu__item:hover{background:var(--ugm-blue-050)}
+.menu__item b{font-size:17px;color:var(--ugm-blue);display:block}
+.menu__item span{font-size:13px;color:var(--text-muted)}
+.menu__no{
+  flex:none;width:34px;height:34px;background:var(--ugm-yellow);
+  color:var(--ugm-blue);font-family:var(--font-mono);font-size:13px;
+  font-weight:var(--weight-bold);
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* --- Catatan presenter -------------------------------------------------- */
+
+.notes{
+  position:fixed;left:0;right:0;bottom:0;z-index:45;
+  background:var(--ugm-blue);color:var(--white);
+  padding:16px 24px 20px;box-sizing:border-box;
+  transform:translateY(100%);
+  transition:transform var(--duration-slow) var(--ease-standard);
+  max-height:34vh;overflow-y:auto;
+}
+.notes.is-open{transform:translateY(0)}
+.notes__k{
+  font-size:12px;font-weight:var(--weight-bold);
+  letter-spacing:var(--tracking-wide);text-transform:uppercase;
+  color:var(--ugm-yellow);margin:0 0 6px;
+}
+.notes__body{margin:0;font-size:16px;line-height:1.55;max-width:100ch}
+.notes__body em{color:var(--ugm-yellow);font-style:normal;font-weight:var(--weight-bold)}
+
+/* --- Timer sesi --------------------------------------------------------- */
+
+.timer{
+  position:fixed;right:18px;top:16px;z-index:44;display:none;
+  background:var(--white);border:1px solid var(--border-subtle);
+  border-radius:var(--radius-sm);box-shadow:var(--shadow-md);
+  padding:10px 14px;min-width:186px;
+}
+.timer.is-open{display:block}
+.timer__clock{
+  font-family:var(--font-mono);font-size:26px;font-weight:var(--weight-bold);
+  color:var(--ugm-blue);line-height:1;
+}
+.timer__block{font-size:12px;color:var(--text-muted);margin-top:5px;line-height:1.35}
+.timer__block b{color:var(--ugm-blue)}
+.timer__ctl{display:flex;gap:6px;margin-top:9px}
+.timer__ctl button{
+  font:inherit;font-size:11px;font-weight:var(--weight-bold);
+  padding:4px 9px;border:1px solid var(--border-default);border-radius:3px;
+  background:var(--white);color:var(--ugm-blue);cursor:pointer;
+}
+.timer__ctl button:hover{background:var(--ugm-blue-050)}
+.timer.is-over .timer__clock{color:var(--status-danger)}
+
+/* --- Bantuan ------------------------------------------------------------ */
+
+.help{
+  position:fixed;inset:0;z-index:60;display:none;
+  background:rgba(1,65,107,.48);backdrop-filter:blur(2px);
+  align-items:center;justify-content:center;
+}
+.help.is-open{display:flex}
+.help__panel{
+  background:var(--white);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);width:620px;max-width:92vw;
+  padding:26px 28px;box-sizing:border-box;
+}
+.help__panel h2{margin:0 0 2px;font-size:22px}
+.help__panel > p{margin:0 0 18px;font-size:13px;color:var(--text-muted)}
+.help__grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 24px}
+.help__row{display:flex;align-items:baseline;gap:11px;font-size:15px}
+kbd{
+  font-family:var(--font-mono);font-size:12px;
+  background:var(--paper);border:1px solid var(--border-default);
+  border-bottom-width:2px;border-radius:3px;padding:2px 7px;
+  color:var(--ugm-blue);flex:none;min-width:22px;text-align:center;
+}
+
+/* --- Cetak: satu slide satu halaman ------------------------------------- */
+
+@page{size:1280px 720px;margin:0}
+
+@media print{
+  html,body{overflow:visible;height:auto;background:var(--white)}
+  .deck{position:static;display:block}
+  .stage{width:auto;height:auto;transform:none !important;display:block}
+  .slide-wrap{
+    position:relative;inset:auto;
+    width:var(--stage-w);height:var(--stage-h);
+    opacity:1 !important;visibility:visible !important;
+    break-after:page;page-break-after:always;
+  }
+  .slide-wrap:last-child{break-after:auto;page-break-after:auto}
+  .nav,.progress,.ov,.menu,.notes,.timer,.help,.wg__hint,.ctl,.btn{display:none !important}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}

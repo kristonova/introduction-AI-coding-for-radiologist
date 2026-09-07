@@ -1,0 +1,73 @@
+/* Colour — values taken from the official 2026 presentation templates and the
+   Panduan Identitas Visual UGM (ch. VI Pemakaian Warna). */
+:root{
+  /* Base brand */
+  --ugm-blue: #01416B;            /* PANTONE P111-16C · C100 M35 Y0 K60 — primary */
+  --ugm-blue-deep: #00375B;       /* pressed / darker navy step */
+  --ugm-blue-mid: #0E426B;        /* variant used for footer type in templates */
+  --ugm-blue-slate: #1D4F80;      /* circle accent, 2026 title slide */
+  --ugm-blue-muted: #29547F;      /* url type on dark navy */
+  --ugm-blue-sky: #1C75BC;        /* supergraphic light blue */
+  --ugm-blue-050: #EAF0F5;        /* navy tint, surfaces */
+  --ugm-blue-100: #CBDAE6;
+  --ugm-blue-200: #9DB8CC;
+  --ugm-blue-400: #4D7A9E;
+
+  --ugm-yellow: #FDD402;          /* PANTONE P7-8C · C0 M18 Y100 K0 — accent */
+  --ugm-yellow-alt: #FDD500;      /* variant found in template 3 */
+  --ugm-yellow-deep: #E2BE00;     /* hover / pressed step */
+  --ugm-yellow-050: #FFF8DB;      /* yellow tint, highlight surfaces */
+  --ugm-gold-foil: #F8C828;       /* sampled from Lambang UGM-emas — print finish only */
+
+  /* Neutrals */
+  --black: #000000;               /* PANTONE Process Black C */
+  --slate-900: #2B2D2F;           /* PANTONE P179-13C */
+  --slate-700: #55585B;
+  --slate-500: #7E8285;
+  --slate-300: #C6C9CB;
+  --slate-200: #E3E5E7;
+  --slate-100: #EEF0F1;
+  --paper: #F8F9FA;               /* PANTONE P179-1C */
+  --white: #FFFFFF;
+
+  /* Semantic — surfaces */
+  --surface-page: var(--white);
+  --surface-subtle: var(--paper);
+  --surface-card: var(--white);
+  --surface-inverse: var(--ugm-blue);
+  --surface-inverse-deep: var(--ugm-blue-deep);
+  --surface-accent: var(--ugm-yellow);
+  --surface-tint: var(--ugm-blue-050);
+  --surface-tint-warm: var(--ugm-yellow-050);
+
+  /* Semantic — text */
+  --text-heading: var(--ugm-blue);
+  --text-body: var(--slate-900);
+  --text-muted: var(--slate-700);
+  --text-subtle: var(--slate-500);
+  --text-on-dark: var(--white);
+  --text-on-dark-muted: rgba(255,255,255,.72);
+  --text-on-accent: var(--ugm-blue);
+  --text-link: var(--ugm-blue);
+  --text-link-hover: var(--ugm-blue-sky);
+
+  /* Semantic — lines */
+  --border-subtle: var(--slate-200);
+  --border-default: var(--slate-300);
+  --border-strong: var(--ugm-blue);
+  --border-on-dark: rgba(255,255,255,.28);
+  --rule-accent: var(--ugm-yellow);
+
+  /* Status — derived in-family, academic and restrained */
+  --status-success: #2E7D52;
+  --status-success-surface: #E8F2EC;
+  --status-warning: #A97400;
+  --status-warning-surface: var(--ugm-yellow-050);
+  --status-danger: #A32020;
+  --status-danger-surface: #FAEAEA;
+  --status-info: var(--ugm-blue-sky);
+  --status-info-surface: var(--ugm-blue-050);
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px rgba(28,117,188,.45);
+}

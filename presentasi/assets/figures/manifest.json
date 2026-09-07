@@ -1,0 +1,182 @@
+{
+  "generated_by": "presentasi/tools/build-figures.py",
+  "source": "assets/pediatric_opg (CC0, Children's Dental Panoramic Radiographs Dataset)",
+  "note": "Jangan mengedit berkas di folder ini secara manual; jalankan ulang skrip.",
+  "files": [
+    {
+      "name": "f1-histogram-acak-hist.png",
+      "bytes": 1352,
+      "sha256": "13da82c9361c43a10ae6f2daedda480f85dc3ccf23e6e19e047bc1e0d948f6c7"
+    },
+    {
+      "name": "f1-histogram-acak.png",
+      "bytes": 555686,
+      "sha256": "992c037958c15f56b3ff7bc80eab598a2faea2a2a463829b0e25b6def0302f4f"
+    },
+    {
+      "name": "f1-histogram-asli-hist.png",
+      "bytes": 1352,
+      "sha256": "13da82c9361c43a10ae6f2daedda480f85dc3ccf23e6e19e047bc1e0d948f6c7"
+    },
+    {
+      "name": "f1-histogram-asli.png",
+      "bytes": 254708,
+      "sha256": "c4401af93a69abdb896260cc77f0f8d65d79ab57cac095abe36d8f7768373add"
+    },
+    {
+      "name": "f2-derau-asli.png",
+      "bytes": 20864,
+      "sha256": "924ffbdb6e28f0d032971ca8de87dca24f9e9ca3db900d62007c2e356dd17705"
+    },
+    {
+      "name": "f2-derau-clahe80.png",
+      "bytes": 24613,
+      "sha256": "01d97fe22db3d2d90661a538217952545c182a6fbfb16fd4493beecef51ee394"
+    },
+    {
+      "name": "f3-kontras-asli.png",
+      "bytes": 164696,
+      "sha256": "f45747f34fd3552c0ea83a0aeae074f89e7ae0de0a47fed0cec7631136b75d87"
+    },
+    {
+      "name": "f3-kontras-clahe10.png",
+      "bytes": 195934,
+      "sha256": "bf9cccacf1b37cd2d932655fa922ec2d221fbdeb124dfbe93dd47079d5f95d35"
+    },
+    {
+      "name": "f3-kontras-clahe20.png",
+      "bytes": 216429,
+      "sha256": "3137c1f1f80f4f4b94f8d99a4c9ef1d0e55b480fce7da766143e53af3ca6b445"
+    },
+    {
+      "name": "f3-kontras-clahe40.png",
+      "bytes": 237786,
+      "sha256": "e431c9c8abf7e96c0f3a0d6531fba1987cf4dd0a19c8a69d0f2186f426ed5536"
+    },
+    {
+      "name": "f3-kontras-clahe80.png",
+      "bytes": 251132,
+      "sha256": "3feff1ab83920bc42861e4748f1091587688deb5669426713a6ca9f59c661382"
+    },
+    {
+      "name": "f3-kontras-he.png",
+      "bytes": 190178,
+      "sha256": "138e9fad4c8de09a31a7b8eb2732f7cece2ec2671bff55e21310d36157b0789f"
+    },
+    {
+      "name": "f4-kontras-asli-hist.png",
+      "bytes": 1289,
+      "sha256": "0bdc63d6a498a796c1e9d2cc6c56793313e741f857b7fe8e23597883b13e5206"
+    },
+    {
+      "name": "f4-kontras-clahe10-hist.png",
+      "bytes": 1301,
+      "sha256": "0b21d81260234a9b956bf9586b91a37dd0b42766afd030b6ce65bf2185ee273b"
+    },
+    {
+      "name": "f4-kontras-clahe20-hist.png",
+      "bytes": 1318,
+      "sha256": "a1ee06c48911748538abf631d817c3f0637e6f2737162208d7ab1c8e750731d8"
+    },
+    {
+      "name": "f4-kontras-clahe40-hist.png",
+      "bytes": 1341,
+      "sha256": "f68917c6aaf2c72fabb4b74d3b9ce58a3ce3d3f89de678749c54b0f32b64bff5"
+    },
+    {
+      "name": "f4-kontras-clahe80-hist.png",
+      "bytes": 1323,
+      "sha256": "c048f8c679e680a8bb7b3d6a3baecc8c1a74b4adfc656473e2a56bd5fd577c3e"
+    },
+    {
+      "name": "f4-kontras-he-hist.png",
+      "bytes": 1155,
+      "sha256": "1c52cfe7a787fe4a1eebc47c1a5b0ad6fd9da5ef59b6055af09d9d894f97821c"
+    },
+    {
+      "name": "f5-loupe-src.png",
+      "bytes": 140347,
+      "sha256": "963cc382285bc9dc3d90091a11f034fb3b317e5b45a59cd93aa2932d67293a89"
+    },
+    {
+      "name": "f6-letterbox-640.png",
+      "bytes": 156083,
+      "sha256": "7bdc55af2dda6e4d0348722ecc7606f600ba1260260cd5cb24d518e670bab2ce"
+    },
+    {
+      "name": "f7-oklusi-grid6.png",
+      "bytes": 214168,
+      "sha256": "c1c5c8e34a6e4d77b103389940f1e9b9fa2b42fb9b57801f6ccad21ea2cf77dd"
+    },
+    {
+      "name": "f7-oklusi-ringkas.png",
+      "bytes": 216078,
+      "sha256": "bc6a0246120db7df9c22db5977e09f094851647f8f7c8a0049ae9079e8fd7f65"
+    },
+    {
+      "name": "f7-opg-test_cate1_000.png",
+      "bytes": 516682,
+      "sha256": "46aafd0781f2c213ec57e742f8ee8b07a9cda4dfde1361619ad718a6367fb012"
+    },
+    {
+      "name": "f7-opg-test_cate1_001.png",
+      "bytes": 528027,
+      "sha256": "09f7cf56c3136eb84dd93d5804b8f965d7358fe4be65202ce026f09bdbf0c267"
+    },
+    {
+      "name": "f7-opg-test_cate1_004.png",
+      "bytes": 522428,
+      "sha256": "e13c81b05f93785b2946dcc9918584e6d75f03a0b4b9b733d5597757563dc630"
+    },
+    {
+      "name": "f7-opg-test_cate1_012.png",
+      "bytes": 531604,
+      "sha256": "83e7db017e467a6f02eb32dc51be156b04ece104d7073d1cfd1034593ac7cd67"
+    },
+    {
+      "name": "f7-overlay-test_cate1_000-conf025.png",
+      "bytes": 514815,
+      "sha256": "17d2281be4266c8c3aca6f6bed9a0addfa0b3197360df60b1bffbf06e49ee350"
+    },
+    {
+      "name": "f7-overlay-test_cate1_000-conf045.png",
+      "bytes": 508470,
+      "sha256": "5abd147b815a90a2f5fa924b4939a437e46c26ff60521e2af864d85535117db8"
+    },
+    {
+      "name": "f7-overlay-test_cate1_001-conf025.png",
+      "bytes": 523896,
+      "sha256": "3a6b47a64f6dd6a0c119c3e46cea16bb84e33a506601338d699670c915585f82"
+    },
+    {
+      "name": "f7-overlay-test_cate1_001-conf045.png",
+      "bytes": 521028,
+      "sha256": "d4aadad428c1b2e7f69f200c1f0f16ec98c053fa4c2305d7bb0b85ebf06c3750"
+    },
+    {
+      "name": "f7-overlay-test_cate1_004-conf025.png",
+      "bytes": 539372,
+      "sha256": "583b13028157f9f49746fc2588992901f093cadc007b1416dba3d28743cbbb9b"
+    },
+    {
+      "name": "f7-overlay-test_cate1_004-conf045.png",
+      "bytes": 520555,
+      "sha256": "ee4d2c988664234d04c854a5d559436db2bc0e6f8dad777abbead7154d4e996c"
+    },
+    {
+      "name": "f7-overlay-test_cate1_012-conf025.png",
+      "bytes": 535408,
+      "sha256": "dab873d0412d1df9fd77d440d90312536ac38bd60821cc41b78555cf4a2e1574"
+    },
+    {
+      "name": "f7-overlay-test_cate1_012-conf045.png",
+      "bytes": 525349,
+      "sha256": "89703d2e882418e799edc5cd09113a04a273f63451b00a0b24b5334bb46a5dcd"
+    },
+    {
+      "name": "f7-sesi1-ringkas.png",
+      "bytes": 470591,
+      "sha256": "15ceae249255d57ce459a62e6827c8b8c103db5c42cae61c8c234a750cae748d"
+    }
+  ]
+}

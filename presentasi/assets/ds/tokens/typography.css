@@ -1,0 +1,38 @@
+/* Type — Gama Serif for ceremonial display, Gama Sans for everything else.
+   Sizes mirror the official template ladder (36 / 32 / 30 / 25.5 / 15 / 14 pt). */
+:root{
+  --font-serif: "Gama Serif", Garamond, "Adobe Caslon Pro", Georgia, serif;
+  --font-sans: "Gama Sans", "PT Sans", "Open Sans", "Segoe UI", system-ui, sans-serif;
+  --font-body-web: "PT Sans", "Open Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: var(--font-serif);
+  --font-ui: var(--font-sans);
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* Scale */
+  --text-4xl: 64px;
+  --text-3xl: 48px;
+  --text-2xl: 36px;
+  --text-xl: 30px;
+  --text-lg: 24px;
+  --text-md: 20px;
+  --text-base: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --text-2xs: 11px;
+
+  --leading-tight: 1.12;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Tracking — the templates letterspace all-caps eyebrows and the url lockup */
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.14em;   /* tagline: 15pt / spc 210 */
+  --tracking-wider: 0.2em;   /* ugm.ac.id: 15pt / spc 300 */
+  --tracking-widest: 0.3em;  /* stacked tagline: 14pt / spc 414 */
+}

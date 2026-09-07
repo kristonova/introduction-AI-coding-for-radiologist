@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aplikasi Coding untuk Radiologi Kedokteran Gigi — PPDGS RKG FKG UGM</title>
+<meta name="description" content="Materi presentasi interaktif praktikum Radiografi Kedokteran Gigi Digital dan Deteksi Otomatis. Meliputi fondasi Python, pengolahan citra radiologi digital, serta evaluasi model deteksi AI dan Explainable AI (XAI).">
+
+<!-- UGM Design System (token layer, di-vendor). Berkas ini satu-satunya
+     pintu masuk; seluruh warna, huruf, dan spasi berasal dari sini. -->
+<link rel="stylesheet" href="assets/ds/styles.css">
+<link rel="stylesheet" href="assets/deck/deck.css">
+<link rel="stylesheet" href="assets/deck/chrome.css">
+</head>
+<body>
+
+<div class="deck" id="deck">
+  <!-- Slide disuntikkan ke sini oleh assets/deck/deck.js -->
+  <div class="stage" id="stage"></div>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav" aria-label="Navigasi slide">
+  <button id="navPrev" type="button" title="Slide sebelumnya (panah kiri)">Sebelumnya</button>
+  <span class="nav__count" id="navCount">1 / 1</span>
+  <button id="navNext" type="button" title="Slide berikutnya (panah kanan)">Berikutnya</button>
+  <span class="nav__sep"></span>
+  <button id="navMenu" type="button" title="Daftar bab (M)">Bab</button>
+  <button id="navOv" type="button" title="Lihat semua slide (O)">Semua Slide</button>
+  <button id="navNotes" type="button" title="Catatan presenter (N)">Catatan</button>
+  <button id="navHelp" type="button" title="Panduan pintasan keyboard (?)">?</button>
+</nav>
+
+<!-- Overview: seluruh slide sebagai thumbnail, dikelompokkan per bab -->
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-label="Semua slide">
+  <div class="ov__head">
+    <h2>Semua Slide</h2>
+    <p>Klik salah satu slide untuk membukanya &middot; Tekan <kbd>Esc</kbd> untuk menutup</p>
+  </div>
+  <div class="ov__grid" id="ovGrid"></div>
+</div>
+
+<!-- Menu bab: deck dipakai di dua hari berbeda, jadi lompat ke Bab 2 harus
+     satu tekan tombol, bukan menggulir 20 slide. -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu bab">
+  <div class="menu__panel">
+    <h2>Daftar Bab</h2>
+    <p>Pintasan cepat: <kbd>M</kbd></p>
+    <div class="menu__list" id="menuList"></div>
+  </div>
+</div>
+
+<!-- Catatan presenter: tersembunyi saat mencetak -->
+<div class="notes" id="notes" aria-live="polite">
+  <p class="notes__k">Catatan Presenter</p>
+  <p class="notes__body" id="notesBody"></p>
+</div>
+
+<!-- Timer 150 menit dengan penanda blok agenda -->
+<div class="timer" id="timer" aria-label="Timer sesi">
+  <div class="timer__clock" id="timerClock">00:00</div>
+  <div class="timer__block" id="timerBlock"></div>
+  <div class="timer__ctl">
+    <button id="timerToggle" type="button">Mulai / Jeda</button>
+    <button id="timerReset" type="button">Reset</button>
+  </div>
+</div>
+
+<div class="help" id="help" role="dialog" aria-modal="true" aria-label="Pintasan keyboard">
+  <div class="help__panel">
+    <h2>Pintasan Keyboard</h2>
+    <p>Tekan <kbd>Esc</kbd> untuk menutup</p>
+    <div class="help__grid">
+      <div class="help__row"><kbd>&rarr;</kbd><span>Slide berikutnya</span></div>
+      <div class="help__row"><kbd>&larr;</kbd><span>Slide sebelumnya</span></div>
+      <div class="help__row"><kbd>Space</kbd><span>Slide berikutnya</span></div>
+      <div class="help__row"><kbd>Home</kbd><span>Slide pertama</span></div>
+      <div class="help__row"><kbd>End</kbd><span>Slide terakhir</span></div>
+      <div class="help__row"><kbd>O</kbd><span>Tampilkan semua slide</span></div>
+      <div class="help__row"><kbd>M</kbd><span>Daftar bab</span></div>
+      <div class="help__row"><kbd>N</kbd><span>Catatan presenter</span></div>
+      <div class="help__row"><kbd>T</kbd><span>Timer sesi (150 menit)</span></div>
+      <div class="help__row"><kbd>F</kbd><span>Layar penuh</span></div>
+      <div class="help__row"><kbd>?</kbd><span>Panduan pintasan ini</span></div>
+      <div class="help__row"><kbd>Esc</kbd><span>Tutup jendela dialog</span></div>
+    </div>
+    <p style="margin:18px 0 0;font-size:13px;color:var(--text-muted)">
+      Klik area sepertiga kanan layar untuk maju, dan sepertiga kiri untuk mundur.
+      Cetak dengan <kbd>Ctrl</kbd>+<kbd>P</kbd> untuk mengekspor ke format PDF (satu slide per halaman).
+    </p>
+  </div>
+</div>
+
+<!-- Konten slide. Urutan berkas menentukan urutan slide di deck. -->
+<script src="assets/deck/slides-0-pembuka.js"></script>
+<script src="assets/deck/slides-1-sesi1.js"></script>
+<script src="assets/deck/slides-2-jembatan.js"></script>
+<script src="assets/deck/slides-3-sesi2.js"></script>
+<script src="assets/deck/slides-4-penutup.js"></script>
+
+<!-- Data terverifikasi dari repo materi (dihasilkan build-figures.py), lalu
+     widget interaktif, lalu engine yang membaca keduanya saat boot. -->
+<script src="assets/deck/data.js"></script>
+<script src="assets/deck/widgets.js"></script>
+<script src="assets/deck/widgets-sesi2.js"></script>
+<script src="assets/deck/deck.js"></script>
+
+</body>
+</html>
