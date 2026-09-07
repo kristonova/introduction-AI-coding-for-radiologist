@@ -29,6 +29,13 @@ def load_notebook(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def find_cell(notebook: dict, snippet: str) -> int:
+    for index, cell in enumerate(notebook["cells"]):
+        if snippet in source_text(cell):
+            return index
+    raise ValueError(f"Cuplikan kode {snippet!r} tidak ditemukan di notebook.")
+
+
 def execute_cells(path: Path, indices: list[int]) -> tuple[dict, dict]:
     notebook = load_notebook(path)
     namespace = {"__name__": "__failure_test__"}
@@ -68,7 +75,15 @@ class BytesResponse:
 
 
 def test_sesi1() -> None:
-    namespace, notebook = execute_cells(S1, [6, 17])
+    notebook_json = load_notebook(S1)
+    setup_idx = find_cell(notebook_json, "import cv2")
+    case_idx = find_cell(notebook_json, 'CASE_ID = "test_cate1_001"')
+    helper_indices = [
+        i
+        for i, cell in enumerate(notebook_json["cells"])
+        if cell.get("cell_type") == "code" and setup_idx <= i < case_idx
+    ]
+    namespace, notebook = execute_cells(S1, helper_indices)
     with tempfile.TemporaryDirectory() as temporary_directory:
         temp = Path(temporary_directory)
 
@@ -122,7 +137,7 @@ def test_sesi1() -> None:
         )
         assert not (temp / "test_fake.png").exists()
 
-    out_of_order = source_text(notebook["cells"][19])
+    out_of_order = source_text(notebook["cells"][case_idx])
     expect_runtime_error(
         lambda: exec(compile(out_of_order, "sesi1-out-of-order", "exec"), {}),
         "helper terlebih dahulu",
@@ -131,7 +146,13 @@ def test_sesi1() -> None:
 
 
 def test_sesi2() -> None:
-    namespace, notebook = execute_cells(S2, [5, 6, 16])
+    notebook_json = load_notebook(S2)
+    setup_idx = find_cell(notebook_json, 'REQUIRED_ORT = "1.27.0"')
+    asset_idx = find_cell(notebook_json, "def load_case(")
+    model_idx = find_cell(notebook_json, "def load_detector(")
+    load_idx = find_cell(notebook_json, "DETECTOR = None")
+    order_idx = find_cell(notebook_json, "Urutan sel belum lengkap")
+    namespace, notebook = execute_cells(S2, [setup_idx, asset_idx, model_idx])
     original_urlopen = namespace["urllib"].request.urlopen
     try:
         with tempfile.TemporaryDirectory() as temporary_directory:
@@ -199,7 +220,7 @@ def test_sesi2() -> None:
                 raise RuntimeError("simulated unavailable model")
 
             namespace["load_detector"] = unavailable_model
-            load_cell = source_text(notebook["cells"][17])
+            load_cell = source_text(notebook["cells"][load_idx])
             exec(compile(load_cell, "sesi2-fallback-mode", "exec"), namespace)
             assert namespace["DETECTOR"] is None
             assert namespace["FALLBACK_DATA"]["kind"] == (
@@ -208,7 +229,7 @@ def test_sesi2() -> None:
     finally:
         namespace["urllib"].request.urlopen = original_urlopen
 
-    out_of_order = source_text(notebook["cells"][21])
+    out_of_order = source_text(notebook["cells"][order_idx])
     expect_runtime_error(
         lambda: exec(compile(out_of_order, "sesi2-out-of-order", "exec"), {}),
         "urutan sel belum lengkap",

@@ -307,9 +307,10 @@ def validate_repository_text() -> None:
     assert "MIT License" not in combined
     adjacent_private_project = "XAI-" + "Mandibular-Caries-Risk"
     assert adjacent_private_project not in combined
-    assert not any(ROOT.rglob("*.onnx"))
-    assert not any(ROOT.rglob("*.pt"))
-    assert not any(ROOT.rglob("*.pth"))
+    ignored_dirs = {".venv", "venv", "__pycache__"}
+    assert not any(p for p in ROOT.rglob("*.onnx") if not set(p.parts) & ignored_dirs)
+    assert not any(p for p in ROOT.rglob("*.pt") if not set(p.parts) & ignored_dirs)
+    assert not any(p for p in ROOT.rglob("*.pth") if not set(p.parts) & ignored_dirs)
 
 
 def main() -> None:
